@@ -42,17 +42,17 @@
 6. **Адміністративні функції:**
     - створенняб редагування та видалення оголошень про події.
     - відображення статистика його події, а саме охоплення переглядів та збереження.
-  
-| Method |	Path+parametrs |Description	| Response |
-| --- | --- |
-| POST | /api/users	| Створення нового облікового запису користувача. | Підтвердження або  повідомлення помилки створення облікового запису | 
-| POST | /api/users/login | Вхід до облікового запису користувача. | Підтвердження або  повідомлення помилки входу в обліковий запис | 
-| GET | /api/users/{user_id} | Отримати користувача з певним ID	| JSON-об’єкт | 
-| GET | /api/events/ | Пошук подій за певним критерієм | Масив JSON-об’єктів | 
-| POST | /api/user/calendar/add//{user_id} | Додати мистецький захід до календаря користувача.	| Підтвердження або  повідомлення помилки додавання події до календаря. | 
-| DELETE | /api/user/calendar/remove/ | Видалити мистецький захід з календаря користувача.	| Підтвердження або  повідомлення помилки видалення події з календаря. | 
-| POST | /api/events/rating/{user_id}/{event_id} | 	Поставити оцінку (like (+1), disslike (+1)) мистецькому заходу. | Підтвердження або  повідомлення помилки оцінювання події. | 
-| GET | /api/admin/statistics/{event_id} |	Отримати статистику події за її ідентифікатором, таку як охоплення переглядів та збереження. | Статистика події у форматі JSON. | 
-| POST | /api/admin/events	| Адміністратор додає подію	|  Підтвердження або  повідомлення помилки створення події | 
-| PUT |	/api/admin/events/{event_id} | Адміністратор оновлює подію | Підтвердження або  повідомлення помилки оновлення події | 
-| DELETE |	/api/admin/events/{event_id} | Адміністратор видаляє подію. | Підтвердження або  повідомлення помилки видалення події | 
+    - 
+| Method | Path+parameters                        | Description                                      | Response                                           |
+| ------ | ------------------------------------- | ------------------------------------------------ | -------------------------------------------------- |
+| POST   | /api/users                            | Creating a new user account.                     | Confirmation or error message for account creation |
+| POST   | /api/users/login                      | User account login.                               | Confirmation or error message for account login    |
+| GET    | /api/users/{user_id}                  | Get user with specific ID.                       | JSON object                                        |
+| GET    | /api/events/                          | Search for events based on specific criteria.    | Array of JSON objects                              |
+| POST   | /api/user/calendar/add/{user_id}      | Add an artistic event to user's calendar.        | Confirmation or error message for event addition to calendar |
+| DELETE | /api/user/calendar/remove/            | Remove an artistic event from user's calendar.   | Confirmation or error message for event removal from calendar |
+| POST   | /api/events/rating/{user_id}/{event_id} | Rate an artistic event (like (+1), dislike (-1)). | Confirmation or error message for event rating    |
+| GET    | /api/admin/statistics/{event_id}      | Get event statistics by its identifier, such as views and saves. | Event statistics in JSON format                    |
+| POST   | /api/admin/events                     | Administrator adds an event.                     | Confirmation or error message for event creation  |
+| PUT    | /api/admin/events/{event_id}          | Administrator updates an event.                  | Confirmation or error message for event update    |
+| DELETE | /api/admin/events/{event_id}          | Administrator deletes an event.                  | Confirmation or error message for event deletion  |
